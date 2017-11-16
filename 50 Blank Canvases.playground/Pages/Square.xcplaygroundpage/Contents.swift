@@ -33,6 +33,10 @@ canvas.translate(byX: 75, byY: 100)
 canvas.drawAxes()
 canvas.defaultLineWidth = 10
 
+// Use a loop to draw four sides
+
+
+
 // Step 2: Draw a side and rotate
 
 canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
@@ -40,26 +44,12 @@ canvas.translate(byX: 200, byY: 0)
 canvas.rotate(by: 90)
 
 
-// Step 3: Draw a side and rotate
-
-canvas.drawAxes()
-canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
-canvas.translate(byX: 200, byY: 0)
-canvas.rotate(by: 90)
-
-// Step 4: Draw a side and rotate
-
-canvas.drawAxes()
-canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
-canvas.translate(byX: 200, byY: 0)
-canvas.rotate(by: 90)
-
-// Step 5: Draw a side and rotate
-
-canvas.drawAxes()
-canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
-canvas.translate(byX: 200, byY: 0)
-canvas.rotate(by: 90)
+for _ in 1...4 {
+    
+    canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
+    canvas.translate(byX: 200, byY: 0)
+    canvas.rotate(by: 90)
+}
 
 
 /*:
