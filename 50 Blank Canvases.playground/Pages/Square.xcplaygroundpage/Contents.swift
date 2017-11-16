@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 400, height: 400)
 
 /*:
  ## Add your code below
@@ -28,27 +28,18 @@ let canvas = Canvas(width: 400, height: 300)
 
 // Step 1: move to the starting point
 
-canvas.translate(byX: 75, byY: 100)
+canvas.translate(byX: 75, byY: 0)
 
 canvas.drawAxes()
 canvas.defaultLineWidth = 10
 
 // Use a loop to draw four sides
 
-
-
-// Step 2: Draw a side and rotate
-
-canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
-canvas.translate(byX: 200, byY: 0)
-canvas.rotate(by: 90)
-
-
-for _ in 1...4 {
+for _ in 1...6 {
     
     canvas.drawLine(fromX: 0, fromY: 0, toX: 200, toY: 0)
     canvas.translate(byX: 200, byY: 0)
-    canvas.rotate(by: 90)
+    canvas.rotate(by: 60)
 }
 
 
